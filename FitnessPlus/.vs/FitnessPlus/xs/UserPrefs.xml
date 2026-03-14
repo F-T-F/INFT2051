@@ -1,0 +1,28 @@
+﻿<Properties StartupConfiguration="{D6A9BFB1-E9A1-435D-B53C-1F6C2E7C5E9D}|Default">
+  <MonoDevelop.Ide.ItemProperties.FitnessPlus AndroidDesignerPreferredDevice="Nexus 4" AndroidDesignerPreferredTheme="AppTheme" PreferredExecutionTarget="Android.pixel_5_-_api_33" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="FitnessPlus" expanded="True">
+            <Node name="FitnessPlus" expanded="True" selected="True">
+              <Node name="Assets" expanded="True" />
+              <Node name="Properties" expanded="True" />
+              <Node name="Resources" expanded="True">
+                <Node name="layout" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_5_-_api_33" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.MonoDroid LastDeploySdkVersion="13.2.2.0" />
+  <MultiItemStartupConfigurations />
+</Properties>

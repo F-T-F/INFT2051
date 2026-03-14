@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0D1A0D">
+
+    <!-- 標題列 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Workout"
+        android:textColor="#FFFFFF"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:background="#111811" />
+
+    <!-- 運動列表 -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Walking -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal"
+                android:background="#1A2A1A"
+                android:gravity="center_vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Walking"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
+
+                <ImageButton
+                    android:id="@+id/btnStartWalking"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@android:drawable/ic_media_play"
+                    android:background="#2E4D2E"
+                    android:tint="#7FFF5A" />
+            </LinearLayout>
+
+            <!-- Running -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal"
+                android:background="#1A2A1A"
+                android:gravity="center_vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Running"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
+
+                <ImageButton
+                    android:id="@+id/btnStartRunning"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@android:drawable/ic_media_play"
+                    android:background="#2E4D2E"
+                    android:tint="#7FFF5A" />
+            </LinearLayout>
+
+            <!-- Hiking -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal"
+                android:background="#1A2A1A"
+                android:gravity="center_vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Hiking"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
+
+                <ImageButton
+                    android:id="@+id/btnStartHiking"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@android:drawable/ic_media_play"
+                    android:background="#2E4D2E"
+                    android:tint="#7FFF5A" />
+            </LinearLayout>
+
+            <!-- Basketball -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal"
+                android:background="#1A2A1A"
+                android:gravity="center_vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Basketball"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
+
+                <ImageButton
+                    android:id="@+id/btnStartBasketball"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@android:drawable/ic_media_play"
+                    android:background="#2E4D2E"
+                    android:tint="#7FFF5A" />
+            </LinearLayout>
+
+            <!-- Cycling -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal"
+                android:background="#1A2A1A"
+                android:gravity="center_vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Cycling"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
+
+                <ImageButton
+                    android:id="@+id/btnStartCycling"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@android:drawable/ic_media_play"
+                    android:background="#2E4D2E"
+                    android:tint="#7FFF5A" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- 底部導覽列 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="#111811"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/btnNavWorkout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@android:drawable/ic_media_play"
+            android:tint="#7FFF5A"
+            android:background="@android:color/transparent" />
+
+        <ImageButton
+            android:id="@+id/btnNavHistory"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@android:drawable/ic_menu_recent_history"
+            android:tint="#555555"
+            android:background="@android:color/transparent" />
+
+        <ImageButton
+            android:id="@+id/btnNavInfo"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@android:drawable/ic_menu_info_details"
+            android:tint="#555555"
+            android:background="@android:color/transparent" />
+
+    </LinearLayout>
+
+</LinearLayout>

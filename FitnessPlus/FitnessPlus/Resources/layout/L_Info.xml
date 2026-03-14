@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0D1A0D">
+
+    <!-- 標題列 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Info"
+        android:textColor="#FFFFFF"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:background="#111811" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- 姓名 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="User Name"
+                android:textColor="#AAAAAA"
+                android:textSize="14sp"
+                android:layout_marginBottom="6dp" />
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Name"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#555555"
+                android:backgroundTint="#1A2A1A"
+                android:paddingLeft="12dp"
+                android:layout_marginBottom="20dp" />
+
+            <!-- 性別 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gender"
+                android:textColor="#AAAAAA"
+                android:textSize="14sp"
+                android:layout_marginBottom="6dp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="20dp">
+
+                <Button
+                    android:id="@+id/btnMale"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:text="M"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:layout_marginEnd="8dp" />
+
+                <Button
+                    android:id="@+id/btnFemale"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:text="F"
+                    android:textColor="#AAAAAA"
+                    android:textSize="16sp"
+                    android:layout_marginStart="8dp" />
+
+            </LinearLayout>
+
+            <!-- 身高 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Height (CM)"
+                android:textColor="#AAAAAA"
+                android:textSize="14sp"
+                android:layout_marginBottom="6dp" />
+            <EditText
+                android:id="@+id/etHeight"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:inputType="number"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#1A2A1A"
+                android:paddingLeft="12dp"
+                android:layout_marginBottom="20dp" />
+
+            <!-- 體重 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Weight (KG)"
+                android:textColor="#AAAAAA"
+                android:textSize="14sp"
+                android:layout_marginBottom="6dp" />
+            <EditText
+                android:id="@+id/etWeight"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:inputType="number"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#1A2A1A"
+                android:paddingLeft="12dp"
+                android:layout_marginBottom="20dp" />
+
+            <!-- 年齡 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Age"
+                android:textColor="#AAAAAA"
+                android:textSize="14sp"
+                android:layout_marginBottom="6dp" />
+            <EditText
+                android:id="@+id/etAge"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:inputType="number"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#1A2A1A"
+                android:paddingLeft="12dp"
+                android:layout_marginBottom="30dp" />
+
+            <!-- 儲存按鈕 -->
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:text="Save"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:backgroundTint="#7FFF5A" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- 底部導覽列 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="#111811"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/btnNavWorkout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@android:drawable/ic_media_play"
+            android:tint="#555555"
+            android:background="@android:color/transparent" />
+
+        <ImageButton
+            android:id="@+id/btnNavHistory"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@android:drawable/ic_menu_recent_history"
+            android:tint="#555555"
+            android:background="@android:color/transparent" />
+
+        <ImageButton
+            android:id="@+id/btnNavInfo"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@android:drawable/ic_menu_info_details"
+            android:tint="#7FFF5A"
+            android:background="@android:color/transparent" />
+
+    </LinearLayout>
+
+</LinearLayout>
