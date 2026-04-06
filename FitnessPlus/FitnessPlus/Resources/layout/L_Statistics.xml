@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0D1A0D"
+    android:gravity="center">
+
+    <!-- 運動名稱 -->
+    <TextView
+        android:id="@+id/tvWorkoutName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Walking"
+        android:textColor="#FFFFFF"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="50dp" />
+
+    <!-- 計時標題 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Workout Time:"
+        android:textColor="#AAAAAA"
+        android:textSize="16sp" />
+
+    <!-- 計時器數字 -->
+    <TextView
+        android:id="@+id/tvTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:00:00"
+        android:textColor="#7FFF5A"
+        android:textSize="52sp"
+        android:textStyle="bold"
+        android:fontFamily="monospace"
+        android:layout_marginBottom="40dp" />
+
+    <!-- 卡路里標題 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Kilocalories:"
+        android:textColor="#AAAAAA"
+        android:textSize="16sp" />
+
+    <!-- 卡路里數字 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="70dp">
+
+        <TextView
+            android:id="@+id/tvCalories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="#42A5F5"
+            android:textSize="52sp"
+            android:textStyle="bold"
+            android:fontFamily="monospace" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  KCAL"
+            android:textColor="#F5E642"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- 暫停按鈕 -->
+    <Button
+        android:id="@+id/btnPause"
+        android:layout_width="260dp"
+        android:layout_height="52dp"
+        android:text="Pause"
+        android:textColor="#F5E642"
+        android:textSize="16sp"
+        android:backgroundTint="#2A3A2A"
+        android:layout_marginBottom="16dp" />
+
+    <!-- 結束按鈕 -->
+    <Button
+        android:id="@+id/btnEnd"
+        android:layout_width="260dp"
+        android:layout_height="52dp"
+        android:text="End"
+        android:textColor="#F54275"
+        android:textSize="16sp"
+        android:backgroundTint="#2A1A1A" />
+
+</LinearLayout>

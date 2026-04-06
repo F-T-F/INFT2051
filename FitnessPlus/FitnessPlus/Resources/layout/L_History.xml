@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- 根佈局：垂直 LinearLayout，深綠色背景，佔滿整個螢幕 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0D1A0D">
+
+    <!-- 標題列 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="History"
+        android:textColor="#FFFFFF"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:background="#111811" />
+
+    <!-- 記錄列表：可滾動，填滿中間剩餘空間 -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp">
+
+        <!-- 記錄卡片由 History.cs 動態生成並插入此容器 -->
+        <LinearLayout
+            android:id="@+id/recordsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+    </ScrollView>
+
+    <!-- 底部導覽列 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="#111811"
+        android:gravity="center">
+
+        <!-- 訓練頁按鈕：當前不在此頁，圖示顯示為暗灰色 -->
+        <ImageButton
+            android:id="@+id/btnNavWorkout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@android:drawable/ic_media_play"
+            android:tint="#555555"
+            android:background="@android:color/transparent" />
+
+        <!-- 歷史記錄頁按鈕：當前所在頁面，圖示高亮顯示為綠色 -->
+        <ImageButton
+            android:id="@+id/btnNavHistory"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@android:drawable/ic_menu_recent_history"
+            android:tint="#7FFF5A"
+            android:background="@android:color/transparent" />
+
+        <!-- 資料頁按鈕：當前不在此頁，圖示顯示為暗灰色 -->
+        <ImageButton
+            android:id="@+id/btnNavInfo"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@android:drawable/ic_menu_info_details"
+            android:tint="#555555"
+            android:background="@android:color/transparent" />
+
+    </LinearLayout>
+
+</LinearLayout>
