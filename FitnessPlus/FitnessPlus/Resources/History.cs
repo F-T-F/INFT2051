@@ -19,7 +19,7 @@ namespace FitnessPlus
             var container = FindViewById<LinearLayout>(Resource.Id.recordsContainer);
             string recordsFilePath = Path.Combine(FilesDir.AbsolutePath, "records.json");
 
-            // 若記錄文件不存在，顯示提示文字後直接返回
+            // 文件不存在，顯示提示字後直接返回
             if (!File.Exists(recordsFilePath))
             {
                 ShowEmpty(container);
@@ -29,14 +29,14 @@ namespace FitnessPlus
             string json = File.ReadAllText(recordsFilePath);
             var records = JsonConvert.DeserializeObject<List<WorkoutRecord>>(json);
 
-            // 若記錄列表為空，顯示提示文字
+            // 列表為空，顯示提示文字
             if (records == null || records.Count == 0)
             {
                 ShowEmpty(container);
                 return;
             }
 
-            // 動態生成每筆記錄的卡片並加入容器
+            // 生成每筆記錄的卡片並加入容器
             foreach (var record in records)
             {
                 var card = CreateRecordCard(record);
@@ -44,7 +44,7 @@ namespace FitnessPlus
             }
         }
 
-        // 動態建立單筆記錄的卡片視圖
+        // 建立單筆記錄的卡片視圖
         Android.Views.View CreateRecordCard(WorkoutRecord record)
         {
             // 外層卡片容器
@@ -58,7 +58,7 @@ namespace FitnessPlus
             card.LayoutParameters = cardParams;
             card.SetPadding(32, 24, 32, 24);
 
-            // 第一行：運動類型（左）+ 日期（右）
+            // 第一行：運動類型+日期
             var row1 = new LinearLayout(this);
             row1.Orientation = Orientation.Horizontal;
             row1.LayoutParameters = new LinearLayout.LayoutParams(
@@ -82,7 +82,7 @@ namespace FitnessPlus
             row1.AddView(tvType);
             row1.AddView(tvDate);
 
-            // 第二行：時長（左）+ 卡路里（右）
+            // 第二行：時間+Cal
             var row2 = new LinearLayout(this);
             row2.Orientation = Orientation.Horizontal;
             var row2Params = new LinearLayout.LayoutParams(
@@ -117,7 +117,7 @@ namespace FitnessPlus
         void ShowEmpty(LinearLayout container)
         {
             var tv = new TextView(this);
-            tv.Text = "No workout records yet.";
+            tv.Text = "No workout records.";
             tv.TextSize = 16f;
             tv.SetTextColor(Android.Graphics.Color.ParseColor("#AAAAAA"));
             tv.Gravity = Android.Views.GravityFlags.Center;

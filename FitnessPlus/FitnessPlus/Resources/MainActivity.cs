@@ -4,6 +4,7 @@ using Android.OS;
 
 namespace FitnessPlus
 {
+    // 將用戶立即重定向至主功能頁面Workout
     [Activity(Label = "Fitness Plus", MainLauncher = true, Theme = "@style/Theme.AppCompat.NoActionBar")]
     public class MainActivity : AndroidX.AppCompat.App.AppCompatActivity
     {
@@ -11,7 +12,7 @@ namespace FitnessPlus
         {
             base.OnCreate(savedInstanceState);
 
-            // 跳到 Workout 頁面
+            // Workout作為應用的主頁面
             StartActivity(new Intent(this, typeof(Workout)));
             Finish();
         }

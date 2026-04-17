@@ -5,7 +5,7 @@
     android:orientation="vertical"
     android:background="#0D1A0D">
 
-    <!-- 標題列 -->
+    <!-- 標題固定高度60dp頁面名稱Workout -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="60dp"
@@ -17,19 +17,19 @@
         android:paddingLeft="20dp"
         android:background="#111811" />
 
-    <!-- 運動列表 -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:padding="16dp">
 
+        <!-- 垂直排列所有運動列 -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- Walking -->
+            <!-- Wanling -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
@@ -172,7 +172,7 @@
         </LinearLayout>
     </ScrollView>
 
-    <!-- 底部導覽列 -->
+    <!-- 底部dock固定高度 60dp -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
@@ -180,6 +180,7 @@
         android:background="#111811"
         android:gravity="center">
 
+        <!-- Workout -->
         <ImageButton
             android:id="@+id/btnNavWorkout"
             android:layout_width="0dp"
@@ -189,6 +190,7 @@
             android:tint="#7FFF5A"
             android:background="@android:color/transparent" />
 
+        <!-- History -->
         <ImageButton
             android:id="@+id/btnNavHistory"
             android:layout_width="0dp"
@@ -198,6 +200,7 @@
             android:tint="#555555"
             android:background="@android:color/transparent" />
 
+        <!-- Info -->
         <ImageButton
             android:id="@+id/btnNavInfo"
             android:layout_width="0dp"

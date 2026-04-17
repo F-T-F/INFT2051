@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "ZgQtUYmJYaKcFwrZFbwpFLSCvoMuPSKJLlVfxAOveh9YedwRPRvYY931eQ4NlSclQXXutY8ZflsVshIJTrWaew==",
+  "dgSpecHash": "UodVAd+poTrXErX2xrBMxSdHufoUTcSCb1OR6qKtdrd1wOMzcPepSyb0kPi45ItWKK4Vn5PYlYKZgbw3G/3OnQ==",
   "success": true,
   "projectFilePath": "/Users/fanxm/Desktop/FitnessPlus/FitnessPlus/FitnessPlus.csproj",
   "expectedPackageFiles": [
+    "/Users/fanxm/.nuget/packages/newtonsoft.json/13.0.4/newtonsoft.json.13.0.4.nupkg.sha512",
     "/Users/fanxm/.nuget/packages/system.numerics.vectors/4.5.0/system.numerics.vectors.4.5.0.nupkg.sha512",
     "/Users/fanxm/.nuget/packages/xamarin.androidx.activity/1.1.0.3/xamarin.androidx.activity.1.1.0.3.nupkg.sha512",
     "/Users/fanxm/.nuget/packages/xamarin.androidx.annotation/1.1.0.7/xamarin.androidx.annotation.1.1.0.7.nupkg.sha512",

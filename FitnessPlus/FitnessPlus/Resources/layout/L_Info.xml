@@ -5,7 +5,7 @@
     android:orientation="vertical"
     android:background="#0D1A0D">
 
-    <!-- 標題列 -->
+    <!-- 標題固定高度60dp頁面名稱Info -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="60dp"
@@ -28,7 +28,7 @@
             android:orientation="vertical"
             android:padding="24dp">
 
-            <!-- 姓名 -->
+            <!-- Name -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -47,7 +47,7 @@
                 android:paddingLeft="12dp"
                 android:layout_marginBottom="20dp" />
 
-            <!-- 性別 -->
+            <!-- Sex -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -55,12 +55,16 @@
                 android:textColor="#AAAAAA"
                 android:textSize="14sp"
                 android:layout_marginBottom="6dp" />
+
+            <!-- MF各佔一半寬 -->
+            <!-- 由Info.cs的UpdateGenderButtons()控制 -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_marginBottom="20dp">
 
+                <!-- M，S綠，US暗 -->
                 <Button
                     android:id="@+id/btnMale"
                     android:layout_width="0dp"
@@ -71,6 +75,7 @@
                     android:textSize="16sp"
                     android:layout_marginEnd="8dp" />
 
+                <!-- F，S粉，US暗 -->
                 <Button
                     android:id="@+id/btnFemale"
                     android:layout_width="0dp"
@@ -83,7 +88,7 @@
 
             </LinearLayout>
 
-            <!-- 身高 -->
+            <!-- Height -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -101,7 +106,7 @@
                 android:paddingLeft="12dp"
                 android:layout_marginBottom="20dp" />
 
-            <!-- 體重 -->
+            <!-- Weight -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -119,7 +124,7 @@
                 android:paddingLeft="12dp"
                 android:layout_marginBottom="20dp" />
 
-            <!-- 年齡 -->
+            <!-- Age -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -137,7 +142,7 @@
                 android:paddingLeft="12dp"
                 android:layout_marginBottom="30dp" />
 
-            <!-- 儲存按鈕 -->
+            <!-- Save將所有資料寫入SharedPreferences -->
             <Button
                 android:id="@+id/btnSave"
                 android:layout_width="match_parent"
@@ -151,7 +156,7 @@
         </LinearLayout>
     </ScrollView>
 
-    <!-- 底部導覽列 -->
+    <!-- 底部dock固定高度 60dp -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
@@ -159,6 +164,7 @@
         android:background="#111811"
         android:gravity="center">
 
+        <!-- Workout -->
         <ImageButton
             android:id="@+id/btnNavWorkout"
             android:layout_width="0dp"
@@ -168,6 +174,7 @@
             android:tint="#555555"
             android:background="@android:color/transparent" />
 
+        <!-- History -->
         <ImageButton
             android:id="@+id/btnNavHistory"
             android:layout_width="0dp"
@@ -177,6 +184,7 @@
             android:tint="#555555"
             android:background="@android:color/transparent" />
 
+        <!-- Info -->
         <ImageButton
             android:id="@+id/btnNavInfo"
             android:layout_width="0dp"

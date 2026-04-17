@@ -9,6 +9,7 @@ using System.Collections.Generic;
 
 namespace FitnessPlus
 {
+    // 運動計時頁面：顯示實時計時、卡路里消耗，並在結束時儲存記錄
     [Activity(Label = "Fitness Plus", Theme = "@style/Theme.AppCompat.NoActionBar")]
     public class Statistics : AndroidX.AppCompat.App.AppCompatActivity
     {
@@ -31,11 +32,13 @@ namespace FitnessPlus
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.L_Statistics);
 
+            // 從 Workout 頁面接收傳入的運動類型，默認為 Walking
             workoutType = Intent.GetStringExtra("workoutType") ?? "Walking";
 
-            // 初始化文件路徑，FilesDir 指向應用的私有文件目錄
+            // 初始化記錄文件路徑
             recordsFilePath = Path.Combine(FilesDir.AbsolutePath, "records.json");
 
+            // 綁定界面控件
             tvWorkoutName = FindViewById<TextView>(Resource.Id.tvWorkoutName);
             tvTimer = FindViewById<TextView>(Resource.Id.tvTimer);
             tvCalories = FindViewById<TextView>(Resource.Id.tvCalories);
@@ -44,6 +47,7 @@ namespace FitnessPlus
 
             tvWorkoutName.Text = workoutType;
 
+            // 計時器：每秒觸發一次，更新時長和卡路里顯示
             timer = new Timer(1000);
             timer.Elapsed += (s, e) =>
             {
@@ -56,6 +60,7 @@ namespace FitnessPlus
                 double hours = totalSeconds / 3600.0;
                 double calories = met * weight * hours;
 
+                // 切換回主線程更新 UI
                 RunOnUiThread(() =>
                 {
                     tvTimer.Text = TimeSpan.FromSeconds(totalSeconds).ToString(@"hh\:mm\:ss");
@@ -64,31 +69,36 @@ namespace FitnessPlus
             };
             timer.Start();
 
+            // 暫停／恢復按鈕：切換計時器狀態並震動提示
             btnPause.Click += (s, e) =>
             {
                 if (!isPaused)
                 {
                     timer.Stop();
                     isPaused = true;
-                    btnPause.Text = "▶  Resume";
+                    btnPause.Text = "Resume";
+                    Vibrate();
                 }
                 else
                 {
                     timer.Start();
                     isPaused = false;
-                    btnPause.Text = "⏸  Pause";
+                    btnPause.Text = "Pause";
+                    Vibrate();
                 }
             };
 
+            // 結束按鈕：停止計時、震動提示、儲存記錄、關閉頁面
             btnEnd.Click += (s, e) =>
             {
                 timer.Stop();
+                Vibrate();
                 SaveRecord();
                 Finish();
             };
         }
 
-        // 根據運動類型返回對應的 MET 值
+        // 根據運動類型返回對應的 MET 值，用於卡路里計算
         double GetMet(string type)
         {
             switch (type)
@@ -102,6 +112,22 @@ namespace FitnessPlus
             }
         }
 
+        // 震動提示
+        void Vibrate()
+        {
+
+            // 獲取服務
+            var vibrator = (Vibrator)GetSystemService(VibratorService);
+
+            // Android API
+            if (Android.OS.Build.VERSION.SdkInt >= Android.OS.BuildVersionCodes.O)
+            {
+                // time
+                vibrator.Vibrate(VibrationEffect.CreateOneShot(500, VibrationEffect.DefaultAmplitude));
+            }
+        }
+
+        // 儲存本次運動記錄至 records.json
         void SaveRecord()
         {
             var prefs = GetSharedPreferences("FitnessPlus", Android.Content.FileCreationMode.Private);
@@ -139,6 +165,7 @@ namespace FitnessPlus
             File.WriteAllText(recordsFilePath, JsonConvert.SerializeObject(records, Formatting.Indented));
         }
 
+        // 頁面銷毀時釋放計時器資源，防止內存洩漏
         protected override void OnDestroy()
         {
             base.OnDestroy();
@@ -147,11 +174,12 @@ namespace FitnessPlus
         }
     }
 
+    // 單筆運動記錄的數據模型
     public class WorkoutRecord
     {
         public string WorkoutType { get; set; }
-        public string Date { get; set; }
+        public string Date { get; set; } 
         public string Duration { get; set; }
-        public int Calories { get; set; }
+        public int Calories { get; set; } 
     }
 }

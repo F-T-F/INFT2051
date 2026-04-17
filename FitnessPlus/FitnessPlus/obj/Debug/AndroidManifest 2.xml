@@ -18,6 +18,8 @@
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
+    <activity android:label="Fitness Plus" android:theme="@style/Theme.AppCompat.NoActionBar" android:name="crc645fbe65f5cc3967f2.Statistics" />
+    <activity android:label="Fitness Plus" android:theme="@style/Theme.AppCompat.NoActionBar" android:name="crc645fbe65f5cc3967f2.History" />
     <service android:name="crc64396a3fe5f8138e3f.KeepAliveService" />
     <receiver android:enabled="true" android:exported="false" android:label="Essentials Battery Broadcast Receiver" android:name="crc64a0e0a82d0db9a07d.BatteryBroadcastReceiver" />
     <receiver android:enabled="true" android:exported="false" android:label="Essentials Energy Saver Broadcast Receiver" android:name="crc64a0e0a82d0db9a07d.EnergySaverBroadcastReceiver" />
