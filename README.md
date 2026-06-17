@@ -1,2 +1,2 @@
 # INFT2051
-Assignment
+Individual Assignment
